@@ -9,7 +9,7 @@ export default function Layout() {
             <div className="flex items-center space-x-3">
               <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
                 <img 
-                  src="/blog-icon.png" 
+                  src={`${import.meta.env.BASE_URL}blog-icon.png`}
                   alt="Blog Icon" 
                   className="h-10 w-10 object-contain"
                 />

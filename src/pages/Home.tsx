@@ -36,7 +36,7 @@ export default function Home() {
       <section className="mb-16">
         <div className="flex items-center justify-center mb-8">
           <img 
-            src="/blog-icon.png" 
+            src={`${import.meta.env.BASE_URL}blog-icon.png`}
             alt="Blog Icon" 
             className="h-24 w-24 object-contain"
           />
