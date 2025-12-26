@@ -36,9 +36,13 @@ export default function Home() {
       <section className="mb-16">
         <div className="flex items-center justify-center mb-8">
           <img 
-            src={`${import.meta.env.BASE_URL}blog-icon.png`}
+            src={import.meta.env.BASE_URL + 'blog-icon.png'}
             alt="Blog Icon" 
             className="h-24 w-24 object-contain"
+            onError={(e) => {
+              console.error('Image load error:', e.currentTarget.src);
+              e.currentTarget.src = '/blog/blog-icon.png';
+            }}
           />
         </div>
         <h1 className="text-5xl font-bold text-gray-900 mb-4 text-center">

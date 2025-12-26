@@ -9,9 +9,13 @@ export default function Layout() {
             <div className="flex items-center space-x-3">
               <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
                 <img 
-                  src={`${import.meta.env.BASE_URL}blog-icon.png`}
+                  src={import.meta.env.BASE_URL + 'blog-icon.png'}
                   alt="Blog Icon" 
                   className="h-10 w-10 object-contain"
+                  onError={(e) => {
+                    console.error('Image load error:', e.currentTarget.src);
+                    e.currentTarget.src = '/blog/blog-icon.png';
+                  }}
                 />
                 <span className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
                   My Blog
