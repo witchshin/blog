@@ -1,5 +1,5 @@
-import type { Post, PostMetadata } from '../types';
-import { parseMarkdown, extractMetadata } from './markdown';
+import type { Post } from '../types';
+import { parseMarkdown } from './markdown';
 
 // 마크다운 파일들을 동적으로 import하기 위한 함수
 async function importAllPosts() {
